@@ -1,0 +1,12 @@
+- name: Create an ACI Tenant
+  hosts: all
+
+
+  tasks:
+    - name: TASK 1 Create Tenant
+      aci_tenant:
+        username: admin
+        password: SomeSecretPassword
+        tenant: production
+        description: Production tenant
+        state: present
